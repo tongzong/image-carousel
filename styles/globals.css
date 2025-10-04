@@ -1,0 +1,24 @@
+@import "tailwindcss";
+/* LIGHT MODE: Default theme on the root selector (like :root or html) */
+:root {
+  /* Set light mode colors as the defaults */
+  --color-background: #f8fafc; /* Light gray-50 */
+  --color-foreground: #1f2937; /* Dark gray-800 */
+}
+
+/* DARK MODE: Overrides when the 'dark' class is present on the html element */
+html.dark {
+  /* Overwrite light mode colors with dark mode colors */
+  --color-background: #1f2937; /* Dark gray-800 */
+  --color-foreground: #f3f4f6; /* Light gray-100 */
+}
+
+/* Define the custom Tailwind utility classes using @apply and the CSS variables */
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.text-foreground {
+  color: var(--color-foreground);
+}
+
